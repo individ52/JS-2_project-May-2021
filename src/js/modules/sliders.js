@@ -30,13 +30,13 @@ const sliders = (slides, dir, prev, next) => {
 
         prevBtn.addEventListener('click', ()=> {
             changeSlides(-1);
-            items[slideIndex-1].classList.remove('slideInLeft');
-            items[slideIndex-1].classList.add('slideInRight');
+            items[slideIndex-1].classList.remove('fadeInLeft');
+            items[slideIndex-1].classList.add('fadeInRight');
         });
         nextBtn.addEventListener('click', ()=> {
             changeSlides(1);
-            items[slideIndex-1].classList.remove('slideInRight');
-            items[slideIndex-1].classList.add('slideInLeft');
+            items[slideIndex-1].classList.remove('fadeInRight');
+            items[slideIndex-1].classList.add('fadeInLeft');
 
         });
     } catch(e) {}
@@ -45,13 +45,13 @@ const sliders = (slides, dir, prev, next) => {
         if(dir === "vertical") {
             paused = setInterval(function() {
                 changeSlides(1);
-                items[slideIndex-1].classList.add('slideInDown');
+                items[slideIndex-1].classList.add('fadeInDown');
             }, 3000);
         } else {
             paused = setInterval(function() {
                 changeSlides(1);
-                items[slideIndex-1].classList.remove('slideInRight');
-                items[slideIndex-1].classList.add('slideInLeft');
+                items[slideIndex-1].classList.remove('fadeInRight');
+                items[slideIndex-1].classList.add('fadeInLeft');
             }, 3000);
         }
     };
