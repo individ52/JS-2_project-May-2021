@@ -7,6 +7,8 @@ import showMoreStyles from "./modules/showMoreStyles";
 import calc from "./modules/calc";
 import filter from "./modules/filter";
 import pictureSize from "./modules/pictureSize";
+// import accordionCSS from "./modules/accordionCSS";
+import accordionJS from "./modules/accordionJS";
 
 window.addEventListener('DOMContentLoaded', ()=> {
     'use strict';
@@ -22,4 +24,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
     calc('#size', '#material', '#options', '.promocode', '.calc-price');
     filter();
     pictureSize('.sizes-block');
+    // accordionCSS('.accordion-heading', '.accordion-block');
+    accordionJS('.accordion-heading');
+
 });
