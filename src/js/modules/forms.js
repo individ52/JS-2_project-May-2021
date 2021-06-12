@@ -34,7 +34,12 @@ const forms = () => {
 
     upload.forEach(item=> {
         item.addEventListener('input', ()=> {
-            console.log(item.files[0]);
+            postData(path.designer, item.files[0])
+                .then(res => {
+                    console.log(res);
+                    textMessage.textContent = message.success;
+                });
+            // console.log(item.files[0]);
             let dots; 
             let arr = item.files[0].name.split(".");
             arr[0].length > 7 ? dots = "..." : dots = ".";

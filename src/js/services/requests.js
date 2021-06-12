@@ -1,4 +1,5 @@
 const postData = async (url, data) => {
+    console.log(data);
     let res = await fetch(url, {
         method: "POST",
         body: data
